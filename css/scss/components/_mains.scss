@@ -1,0 +1,81 @@
+/*************************************************************\
+  Main
+\*************************************************************/
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+  min-height: 40vh;
+  max-height: 65vh;
+  background-image: url('https://rolandorojodotcom.files.wordpress.com/2021/01/imagen-inicio-1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  @include padding(7rem);
+
+  &__name {
+    width: 40%;
+    color: $color-text-primary-dark;
+    @include font(7rem);
+  }
+
+  &__info {
+    width: 50%;
+    padding: 5rem;
+    padding-right: 0;
+    color: $color-text-primary-dark;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $color-text-aux;
+    @include font(1.6rem);
+
+    &::before {
+      content: "";
+      width: 1.5rem;
+      height: 0.3rem;
+      display: inline-block;
+      margin-right: 1rem;
+      background: $color-text-aux;
+    }
+  }
+
+  &__profesion {
+    padding: 2rem 0;
+    color: $color-text-primary-dark;
+    @include font(3.6rem);
+  }
+
+  &__description {
+    padding-bottom: 2rem;
+    text-align: justify;
+    @include font(1.8rem);
+  }
+}
+
+.link {
+  font-weight: 900;
+  color: $color-bg-aux;
+  @include font(1.6rem);
+  @include transition(.3s);
+
+  &:hover {
+    color: $color-text-aux;
+  }
+
+  &__text {
+    margin-right: 1rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

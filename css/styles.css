@@ -34,6 +34,9 @@ body {
 header {
   display: flex;
   flex-direction: row;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   width: 100%;
   background-color: #333646;
   padding: 2rem 30rem;
@@ -172,4 +175,82 @@ ul {
 .scl-net__image:hover {
   font-size: 3.5rem;
   color: #e9b258;
+}
+
+/*************************************************************\
+  Main
+\*************************************************************/
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+  min-height: 40vh;
+  max-height: 65vh;
+  background-image: url("https://rolandorojodotcom.files.wordpress.com/2021/01/imagen-inicio-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 7rem 30rem;
+}
+.intro__name {
+  width: 40%;
+  color: #f3f3f4;
+  font-size: 7rem;
+  font-family: "Open Sans", sans-serif;
+}
+.intro__info {
+  width: 50%;
+  padding: 5rem;
+  padding-right: 0;
+  color: #f3f3f4;
+}
+.intro__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #e9b258;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+}
+.intro__title::before {
+  content: "";
+  width: 1.5rem;
+  height: 0.3rem;
+  display: inline-block;
+  margin-right: 1rem;
+  background: #e9b258;
+}
+.intro__profesion {
+  padding: 2rem 0;
+  color: #f3f3f4;
+  font-size: 3.6rem;
+  font-family: "Open Sans", sans-serif;
+}
+.intro__description {
+  padding-bottom: 2rem;
+  text-align: justify;
+  font-size: 1.8rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.link {
+  font-weight: 900;
+  color: #ffaf29;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  transition: 0.3s ease all;
+}
+.link:hover {
+  color: #e9b258;
+}
+.link__text {
+  margin-right: 1rem;
+}
+.link__text:hover {
+  text-decoration: underline;
 }
