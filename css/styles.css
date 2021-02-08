@@ -26,6 +26,11 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+  transition: 0.5s ease all;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -36,6 +41,7 @@ header {
 
 a {
   text-decoration: none;
+  color: #f3f3f4;
 }
 
 ul {
@@ -80,22 +86,11 @@ ul {
   font-family: "Open Sans", sans-serif;
 }
 .nav__text {
+  transition: 0.5s ease all;
   border-bottom: 0.3rem solid transparent;
 }
 .nav__link:hover .nav__text {
   border-bottom: 0.3rem solid #ffaf29;
-}
-.nav__ref {
-  display: none;
-  width: 0.7rem;
-  height: 0.7rem;
-  margin-top: 0.5rem;
-  border-radius: 50%;
-  transition: 0.3s ease all;
-  background-color: #ffaf29;
-}
-.nav__link:hover .nav__ref {
-  display: block;
 }
 
 /*************************************************************\
@@ -130,7 +125,6 @@ ul {
   left: 0;
   right: unset;
   bottom: 0;
-  transition: 0.5s ease all;
   transition-timing-function: cubic-bezier(0.55, 1.03, 0.8, 0.77);
   box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
   background-color: #ffaf29;
@@ -138,6 +132,7 @@ ul {
   height: 3rem;
   line-height: 3rem;
   border-radius: 50%;
+  transition: 0.5s ease all;
 }
 .nav__toggle .switch.active::after {
   transform: translateX(100%);
@@ -153,4 +148,28 @@ ul {
   height: 3rem;
   line-height: 3rem;
   border-radius: 50%;
+}
+
+/*************************************************************\
+  Social networks menu
+\*************************************************************/
+.scl-net {
+  position: fixed;
+  top: calc(30%);
+  background-color: #252734;
+}
+.scl-net__list {
+  padding: 1.5rem;
+}
+.scl-net__item {
+  margin: 1rem 0;
+}
+.scl-net__image {
+  font-size: 3rem;
+  color: #f3f3f4;
+  transition: 0.3s ease all;
+}
+.scl-net__image:hover {
+  font-size: 3.5rem;
+  color: #e9b258;
 }

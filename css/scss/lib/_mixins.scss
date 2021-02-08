@@ -3,18 +3,18 @@
 \*************************************************************/
 
 // Padding left and rigth for the containers
-@mixin padding($top: 0rem) {
+@mixin padding ($top: 0rem) {
   padding: $top 30rem;
 }
 
 // Font size and family auto
-@mixin font($size: $font-size) {
+@mixin font ($size: $font-size) {
   font-size: $size;
   font-family: $font-family;
 }
 
 // Border bottom
-@mixin border-bottom($size: $border-size, $color: $border-color) {
+@mixin border-bottom ($size: $border-size, $color: $border-color) {
   border-bottom: $size solid $color;
 }
 
@@ -24,4 +24,8 @@
   height: $size;
   line-height: $size;
   border-radius: 50%;
+}
+
+@mixin transition ($time: $transition-time) {
+  transition: $time ease all;
 }

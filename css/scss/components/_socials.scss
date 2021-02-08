@@ -1,0 +1,28 @@
+/*************************************************************\
+  Social networks menu
+\*************************************************************/
+
+.scl-net {
+  position: fixed;
+  top: calc(30%);
+  background-color: $color-bg-secundary-dark;
+
+  &__list {
+    padding: 1.5rem;
+  }
+
+  &__item {
+    margin: 1rem 0;
+  }
+
+  &__image {
+    font-size: 3rem;
+    color: $color-text-primary-dark;
+    @include transition(.3s);
+
+    &:hover {
+      font-size: 3.5rem;
+      color: $color-text-aux;
+    }
+  }
+}

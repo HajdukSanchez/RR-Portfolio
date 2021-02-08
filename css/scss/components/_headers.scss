@@ -41,24 +41,11 @@
   }
 
   &__text {
+    @include transition();
     @include border-bottom(.3rem);
 
     .nav__link:hover & {
       @include border-bottom(.3rem, $color-bg-aux);
-    }
-  }
-
-  &__ref {
-    display: none;
-    width: .7rem;
-    height: .7rem;
-    margin-top: .5rem;
-    border-radius: 50%;
-    transition: .3s ease all;
-    background-color: $color-bg-aux;
-
-    .nav__link:hover & {
-      display: block;
     }
   }
 }
