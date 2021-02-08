@@ -4,6 +4,9 @@
 
 // Libraries, variables and functions
 @import 'lib/variables';
+@import 'lib/mixins';
 
 // Components
 @import 'components/globals';
+@import 'components/headers';
+@import 'components/toggles';

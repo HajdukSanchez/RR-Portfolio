@@ -8,6 +8,7 @@
     <meta name='description' content='Personal Portfolio R.R'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/545d1a6ebe.js" crossorigin="anonymous"></script>
     <link rel='stylesheet' href='css/styles.css'>
     <title>Rolando Rojo</title>
   </head>
@@ -20,26 +21,33 @@
           </a>
         </figure>
         <div class="nav__toggles">
-          <div class="nav__toggle nav__toggle--dark-mode"></div>
-          <div class="nav__toggle nav__toggle--language"></div>
+          <div class="nav__toggle" title="Theme">
+            <button class="switch switch--theme" id="switch-theme">
+              <span><i class="fas fa-moon" title="Dark"></i></span>
+              <span><i class="fas fa-sun" title="Ligth"></i></span>
+            </button>
+          </div>
+          <div class="nav__toggle" title="Language">
+            <button class="switch switch--lang" id="switch-lang">
+              <span><img src="images/ico-venezuela-16.png" alt="Icon for languege mode" title="Español"></span>
+              <span><img src="images/ico-usa-16.png" alt="Icon for languege mode" title="English"></span>
+            </button>
+          </div>
         </div>
         <ul class="nav__list">
           <li class="nav__item">
             <a href="#" class="nav__link">
               <h2 class="nav__text">About</h2>
-              <span class="nav__ref"></span>
             </a>
           </li>
           <li class="nav__item">
             <a href="#" class="nav__link">
               <h2 class="nav__text">Works</h2>
-              <span class="nav__ref"></span>
             </a>
           </li>
           <li class="nav__item">
             <a href="#" class="nav__link">
               <h2 class="nav__text">Contact</h2>
-              <span class="nav__ref"></span>
             </a>
           </li>
         </ul>

@@ -1,0 +1,60 @@
+/*************************************************************\
+  Toogles
+\*************************************************************/
+
+.nav__toggles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-left: 15rem;
+}
+
+.nav__toggle {
+  margin-right: 2rem;
+
+  .switch {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: $border-radius;
+    outline: none;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: unset;
+      bottom: 0;
+      transition: .3s ease all;
+      box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, .2);
+      background-color: $color-bg-aux;
+      @include toggles;
+    }
+
+    &.active {
+      &::after {
+        left: unset;
+        right: 0;
+      }
+    }
+
+    &--lang {
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    span {
+      background-color: $color-text-primary-dark;
+      @include toggles;
+    }
+  }
+}

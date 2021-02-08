@@ -1,0 +1,64 @@
+/*************************************************************\
+  Header
+\*************************************************************/
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &__logo {
+    max-width: 25rem;
+    min-width: 15rem;
+
+    &--image {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 30rem;
+    max-width: 25rem;
+  }
+
+  &__item {
+    padding-left: 1rem;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-text-primary-dark;
+    @include font();
+  }
+
+  &__text {
+    @include border-bottom(.3rem);
+
+    .nav__link:hover & {
+      @include border-bottom(.3rem, $color-bg-aux);
+    }
+  }
+
+  &__ref {
+    display: none;
+    width: .7rem;
+    height: .7rem;
+    margin-top: .5rem;
+    border-radius: 50%;
+    transition: .3s ease all;
+    background-color: $color-bg-aux;
+
+    .nav__link:hover & {
+      display: block;
+    }
+  }
+}
