@@ -24,6 +24,13 @@ $btn_swicth_lang.addEventListener('click', () => {
   localStorage.setItem('lang-es', lang_mode);
 });
 
+// Function to show the company information
+function viewInfo(id) {
+  const $company = document.getElementById(`${id}`);
+  /* Add class active to show company information */
+  $company.classList.toggle('active');
+}
+
 // Function to excecuted on load
 (function onLoad() {
   // Evaluate theme mode

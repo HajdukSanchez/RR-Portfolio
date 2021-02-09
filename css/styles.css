@@ -268,20 +268,23 @@ ul {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 5rem 30rem;
   background-color: #252734;
+  padding: 5rem 30rem;
 }
 .about__info {
   width: 50%;
 }
 .about__title {
   padding-bottom: 4rem;
-  font-size: 3.6rem;
   color: #f3f3f4;
+  display: flex;
+  flex-direction: column;
+  color: #f3f3f4;
+  font-size: 3.6rem;
+  font-family: "Open Sans", sans-serif;
 }
 .about__title::before {
   content: "";
-  display: flex;
   width: 8rem;
   height: 0.5rem;
   margin-bottom: 0.5rem;
@@ -306,4 +309,87 @@ ul {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/*************************************************************\
+  Companies section
+\*************************************************************/
+.companies {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #333646;
+  padding: 7rem 30rem;
+}
+.companies__title {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  color: #f3f3f4;
+  font-size: 3.6rem;
+  font-family: "Open Sans", sans-serif;
+}
+.companies__title::before {
+  margin-right: 1rem;
+  content: "";
+  width: 8rem;
+  height: 0.5rem;
+  margin-bottom: 0;
+  background-color: #ffaf29;
+}
+.companies__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.company {
+  width: 33%;
+  padding: 2rem;
+}
+.company__picture {
+  width: 100%;
+  padding: 3rem;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+  background: #666874;
+  cursor: pointer;
+}
+.company__picture.active + .company__info {
+  transform: scaleY(100%);
+  opacity: 1;
+}
+.company__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.company__info {
+  height: 0%;
+  opacity: 0;
+  padding: 2rem;
+  border-bottom-left-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+  border-top: 0;
+  background: #252734;
+  transition: 0.3s ease all;
+}
+.company__name {
+  padding-bottom: 1rem;
+  font-weight: 900;
+  color: #f3f3f4;
+  font-size: 1.7rem;
+  font-family: "Open Sans", sans-serif;
+}
+.company__description {
+  color: #666874;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
 }
