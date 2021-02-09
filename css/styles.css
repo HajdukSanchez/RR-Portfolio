@@ -73,11 +73,9 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-width: 30rem;
-  max-width: 25rem;
 }
 .nav__item {
-  padding-left: 1rem;
+  padding-left: 3rem;
 }
 .nav__link {
   display: flex;
@@ -99,7 +97,7 @@ ul {
 /*************************************************************\
   Toogles components
 \*************************************************************/
-.nav__toggles {
+.toggles {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -107,11 +105,10 @@ ul {
   padding: 1rem;
   margin-left: 15rem;
 }
-
-.nav__toggle {
+.toggles__toggle {
   margin-right: 2rem;
 }
-.nav__toggle .switch {
+.toggles__toggle .switch {
   display: flex;
   position: relative;
   width: 100%;
@@ -121,7 +118,7 @@ ul {
   outline: none;
   cursor: pointer;
 }
-.nav__toggle .switch::after {
+.toggles__toggle .switch::after {
   content: "";
   position: absolute;
   top: 0;
@@ -137,15 +134,15 @@ ul {
   border-radius: 50%;
   transition: 0.5s ease all;
 }
-.nav__toggle .switch.active::after {
+.toggles__toggle .switch.active::after {
   transform: translateX(100%);
 }
-.nav__toggle .switch--lang span {
+.toggles__toggle .switch--lang span {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.nav__toggle .switch span {
+.toggles__toggle .switch span {
   background-color: #f3f3f4;
   width: 3rem;
   height: 3rem;

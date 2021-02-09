@@ -23,12 +23,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    min-width: 30rem;
-    max-width: 25rem;
   }
 
   &__item {
-    padding-left: 1rem;
+    padding-left: 3rem;
   }
 
   &__link {
