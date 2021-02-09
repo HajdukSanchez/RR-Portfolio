@@ -1,0 +1,15 @@
+/*************************************************************\
+  Works section
+\*************************************************************/
+
+.works {
+  background-color: $color-bg-secundary-dark;
+  @include padding(7rem);
+
+  &__description {
+    padding-bottom: 7rem;
+    text-align: justify;
+    color: $color-text-secundary-dark;
+    @include font();
+  }
+}

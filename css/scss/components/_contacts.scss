@@ -1,0 +1,103 @@
+/*************************************************************\
+  Contact section
+\*************************************************************/
+
+.contact {
+  width: 100%;
+  background-color: $color-bg-primary-dark;
+  @include padding(7rem);
+
+  &__form {
+    display: grid;
+    grid-template: 1fr 1fr 5fr / repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  border-radius: .4rem;
+
+  &--name {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: flex-end;
+  }
+
+  &--lastName {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: flex-start;
+  }
+
+  &--mail {
+    grid-row: 2 / 3;
+  }
+
+  &--msm {
+    grid-row: 3 / 4;
+    height: 100%;
+  }
+
+  &__names {
+    width: 40rem;
+  }
+
+  &__info {
+    grid-column: 1 / 3;
+    justify-self: center;
+    width: 82rem;
+  }
+}
+
+.input {
+
+  &__text {
+    width: 100%;
+    height: 100%;
+    padding: 0 2rem;
+    border: 0;
+    border-radius: inherit;
+    outline: none;
+    font-size: 1.8rem;
+    background-color: $color-bg-secundary-dark;
+    color: $color-text-secundary-dark;
+    @include transition(.3s);
+
+    &:focus {
+      border: .4rem solid $color-bg-aux;
+    }
+
+    &--msm {
+      height: 100%;
+      padding: 1rem 1rem 1rem 2rem;
+      resize: none;
+      overflow-y: auto;
+      @include font($font-size);
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    color: $color-text-secundary-dark;
+    @include transition(.3s);
+    @include font();
+
+    .input__text:focus + & {
+      top: -1.2rem;
+      padding: 0 1rem;
+      font-size: 1.4rem;
+      border-radius: inherit;
+      background-color: $color-bg-secundary-dark;
+      color: $color-bg-aux;
+    }
+  }
+}

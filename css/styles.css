@@ -13,6 +13,41 @@
   Mixins
 \*************************************************************/
 /*************************************************************\
+  Animations
+\*************************************************************/
+@-webkit-keyframes scroll_slider--left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-20rem * 7));
+  }
+}
+@keyframes scroll_slider--left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-20rem * 7));
+  }
+}
+@-webkit-keyframes scroll_slider--rigth {
+  0% {
+    transform: translateX(calc(-20rem * 7));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes scroll_slider--rigth {
+  0% {
+    transform: translateX(calc(-20rem * 7));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/*************************************************************\
   Globals
 \*************************************************************/
 /* Developed by Jozek Andrzej Hajduk Sánchez */
@@ -61,12 +96,13 @@ ul {
   align-items: center;
   width: 100%;
 }
-.nav__logo {
-  max-width: 25rem;
-  min-width: 15rem;
+.nav__logo--link {
+  width: 100%;
+  height: 100%;
 }
 .nav__logo--image {
-  width: 100%;
+  width: 8rem;
+  height: 4rem;
 }
 .nav__list {
   display: flex;
@@ -75,7 +111,7 @@ ul {
   align-items: center;
 }
 .nav__item {
-  padding-left: 3rem;
+  padding-right: 3rem;
 }
 .nav__link {
   display: flex;
@@ -83,7 +119,7 @@ ul {
   justify-content: center;
   align-items: center;
   color: #f3f3f4;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-family: "Open Sans", sans-serif;
 }
 .nav__text {
@@ -236,6 +272,43 @@ ul {
 }
 
 /*************************************************************\
+  Titles of the sections
+\*************************************************************/
+.title {
+  width: 100%;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  color: #f3f3f4;
+  font-size: 3.6rem;
+  font-family: "Open Sans", sans-serif;
+}
+.title::before {
+  margin-right: 1rem;
+  content: "";
+  width: 8rem;
+  height: 0.5rem;
+  margin-bottom: 0;
+  background-color: #ffaf29;
+}
+.title--about {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.title--companies {
+  justify-content: center;
+  align-items: center;
+}
+.title--works {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.title--contact {
+  justify-content: center;
+  align-items: center;
+}
+
+/*************************************************************\
   Links
 \*************************************************************/
 .link {
@@ -322,25 +395,6 @@ ul {
   background-color: #333646;
   padding: 7rem 30rem;
 }
-.companies__title {
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 4rem;
-  display: flex;
-  flex-direction: column;
-  color: #f3f3f4;
-  font-size: 3.6rem;
-  font-family: "Open Sans", sans-serif;
-}
-.companies__title::before {
-  margin-right: 1rem;
-  content: "";
-  width: 8rem;
-  height: 0.5rem;
-  margin-bottom: 0;
-  background-color: #ffaf29;
-}
 .companies__list {
   display: flex;
   flex-direction: row;
@@ -355,7 +409,7 @@ ul {
 }
 .company__picture {
   width: 100%;
-  padding: 3rem;
+  padding: 1rem 3rem;
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
   background: #666874;
@@ -392,4 +446,140 @@ ul {
   color: #666874;
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
+}
+
+/*************************************************************\
+  Works section
+\*************************************************************/
+.works {
+  background-color: #252734;
+  padding: 7rem 30rem;
+}
+.works__description {
+  padding-bottom: 7rem;
+  text-align: justify;
+  color: #666874;
+  font-size: 1.8rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+/*************************************************************\
+  Slider component
+\*************************************************************/
+.sliders {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: calc(23rem * 7);
+}
+.slider__picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23rem;
+  height: 20rem;
+  padding: 1rem;
+}
+.slider__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2rem;
+}
+
+/*************************************************************\
+  Contact section
+\*************************************************************/
+.contact {
+  width: 100%;
+  background-color: #333646;
+  padding: 7rem 30rem;
+}
+.contact__form {
+  display: grid;
+  grid-template: 1fr 1fr 5fr/repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  border-radius: 0.4rem;
+}
+.input-container--name {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: flex-end;
+}
+.input-container--lastName {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-self: flex-start;
+}
+.input-container--mail {
+  grid-row: 2/3;
+}
+.input-container--msm {
+  grid-row: 3/4;
+  height: 100%;
+}
+.input-container__names {
+  width: 40rem;
+}
+.input-container__info {
+  grid-column: 1/3;
+  justify-self: center;
+  width: 82rem;
+}
+
+.input__text {
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  border: 0;
+  border-radius: inherit;
+  outline: none;
+  font-size: 1.8rem;
+  background-color: #252734;
+  color: #666874;
+  transition: 0.3s ease all;
+}
+.input__text:focus {
+  border: 0.4rem solid #ffaf29;
+}
+.input__text--msm {
+  height: 100%;
+  padding: 1rem 1rem 1rem 2rem;
+  resize: none;
+  overflow-y: auto;
+  font-size: 1.8rem;
+  font-family: "Open Sans", sans-serif;
+}
+.input__label {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  color: #666874;
+  transition: 0.3s ease all;
+  font-size: 1.8rem;
+  font-family: "Open Sans", sans-serif;
+}
+.input__text:focus + .input__label {
+  top: -1.2rem;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+  border-radius: inherit;
+  background-color: #252734;
+  color: #ffaf29;
 }

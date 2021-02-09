@@ -1,0 +1,35 @@
+/*************************************************************\
+  Titles of the sections
+\*************************************************************/
+
+.title {
+  width: 100%;
+  padding-bottom: 4rem;
+  @include titles(column);
+  @include font($font-size-titles);
+
+  &::before {
+    margin-right: 1rem;
+    @include titles_pseudoElement(8rem, 0);
+  }
+
+  &--about {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &--companies {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--works {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &--contact {
+    justify-content: center;
+    align-items: center;
+  }
+}

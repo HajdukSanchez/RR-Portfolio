@@ -10,20 +10,6 @@
   background-color: $color-bg-primary-dark;
   @include padding(7rem);
 
-  &__title {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 4rem;
-    @include titles(column);
-    @include font($font-size-titles);
-
-    &::before {
-      margin-right: 1rem;
-      @include titles_pseudoElement(8rem, 0);
-    }
-  }
-
   &__list {
     display: flex;
     flex-direction: row;
@@ -39,7 +25,7 @@
 
   &__picture {
     width: 100%;
-    padding: 3rem;
+    padding: 1rem 3rem;
     border-top-left-radius: .7rem;
     border-top-right-radius: .7rem;
     background: $color-text-secundary-dark;

@@ -5,6 +5,7 @@
 // Libraries, variables and functions
 @import 'lib/variables';
 @import 'lib/mixins';
+@import 'lib/animations';
 
 // Components
 @import 'components/globals';
@@ -12,6 +13,10 @@
 @import 'components/toggles';
 @import 'components/socials';
 @import 'components/mains';
+@import 'components/titles';
 @import 'components/links';
 @import 'components/abouts';
 @import 'components/companies';
+@import 'components/works';
+@import 'components/sliders';
+@import 'components/contacts';
