@@ -25,7 +25,7 @@ header {
   top: 0;
   width: 100%;
   background-color: $color-bg-primary-dark;
-  @include padding(2rem);
+  @include padding(.5rem);
 }
 
 a {

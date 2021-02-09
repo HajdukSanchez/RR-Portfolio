@@ -7,15 +7,14 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
-  height: 50vh;
-  min-height: 40vh;
-  max-height: 65vh;
+  width: 100%;
+  height: 65vh;
+  min-height: 50vh;
+  max-height: 75vh;
   background-image: url('https://rolandorojodotcom.files.wordpress.com/2021/01/imagen-inicio-1.jpg');
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  object-fit: contain;
   @include padding(7rem);
 
   &__name {
@@ -58,24 +57,5 @@
     padding-bottom: 2rem;
     text-align: justify;
     @include font(1.8rem);
-  }
-}
-
-.link {
-  font-weight: 900;
-  color: $color-bg-aux;
-  @include font(1.6rem);
-  @include transition(.3s);
-
-  &:hover {
-    color: $color-text-aux;
-  }
-
-  &__text {
-    margin-right: 1rem;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }

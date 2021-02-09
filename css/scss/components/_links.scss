@@ -1,0 +1,26 @@
+/*************************************************************\
+  Links
+\*************************************************************/
+
+.link {
+  font-weight: 900;
+  color: $color-bg-aux;
+  @include font(1.6rem);
+  @include transition(.3s);
+
+  &:hover {
+    color: $color-text-aux;
+  }
+
+  &__text {
+    margin-right: 1rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--contact {
+    @include font(2.2rem);
+  }
+}

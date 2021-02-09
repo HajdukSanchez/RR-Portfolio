@@ -5,6 +5,8 @@
 .scl-net {
   position: fixed;
   top: calc(30%);
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
   background-color: $color-bg-secundary-dark;
 
   &__list {
@@ -12,16 +14,18 @@
   }
 
   &__item {
-    margin: 1rem 0;
+
+    &:first-child {
+      margin-bottom: 1rem;
+    }
   }
 
   &__image {
-    font-size: 3rem;
     color: $color-text-primary-dark;
+    @include font(3rem);
     @include transition(.3s);
 
     &:hover {
-      font-size: 3.5rem;
       color: $color-text-aux;
     }
   }

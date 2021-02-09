@@ -39,7 +39,7 @@ header {
   top: 0;
   width: 100%;
   background-color: #333646;
-  padding: 2rem 30rem;
+  padding: 0.5rem 30rem;
 }
 
 a {
@@ -52,7 +52,7 @@ ul {
 }
 
 /*************************************************************\
-  Header
+  Header section
 \*************************************************************/
 .nav {
   display: flex;
@@ -97,7 +97,7 @@ ul {
 }
 
 /*************************************************************\
-  Toogles
+  Toogles components
 \*************************************************************/
 .nav__toggles {
   display: flex;
@@ -159,21 +159,23 @@ ul {
 .scl-net {
   position: fixed;
   top: calc(30%);
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
   background-color: #252734;
 }
 .scl-net__list {
   padding: 1.5rem;
 }
-.scl-net__item {
-  margin: 1rem 0;
+.scl-net__item:first-child {
+  margin-bottom: 1rem;
 }
 .scl-net__image {
-  font-size: 3rem;
   color: #f3f3f4;
+  font-size: 3rem;
+  font-family: "Open Sans", sans-serif;
   transition: 0.3s ease all;
 }
 .scl-net__image:hover {
-  font-size: 3.5rem;
   color: #e9b258;
 }
 
@@ -185,16 +187,14 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
-  height: 50vh;
-  min-height: 40vh;
-  max-height: 65vh;
+  width: 100%;
+  height: 65vh;
+  min-height: 50vh;
+  max-height: 75vh;
   background-image: url("https://rolandorojodotcom.files.wordpress.com/2021/01/imagen-inicio-1.jpg");
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  -o-object-fit: contain;
-     object-fit: contain;
   padding: 7rem 30rem;
 }
 .intro__name {
@@ -238,6 +238,9 @@ ul {
   font-family: "Open Sans", sans-serif;
 }
 
+/*************************************************************\
+  Links
+\*************************************************************/
 .link {
   font-weight: 900;
   color: #ffaf29;
@@ -253,4 +256,57 @@ ul {
 }
 .link__text:hover {
   text-decoration: underline;
+}
+.link--contact {
+  font-size: 2.2rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+/*************************************************************\
+  About section
+\*************************************************************/
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5rem 30rem;
+  background-color: #252734;
+}
+.about__info {
+  width: 50%;
+}
+.about__title {
+  padding-bottom: 4rem;
+  font-size: 3.6rem;
+  color: #f3f3f4;
+}
+.about__title::before {
+  content: "";
+  display: flex;
+  width: 8rem;
+  height: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: #ffaf29;
+}
+.about__text {
+  padding-bottom: 4rem;
+  font-size: 1.8rem;
+  text-align: justify;
+  color: #666874;
+}
+.about__picture {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  padding: 4rem;
+}
+.about__image {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
