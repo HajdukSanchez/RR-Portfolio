@@ -7,7 +7,9 @@
   top: calc(30%);
   border-bottom-right-radius: 2rem;
   border-top-right-radius: 2rem;
+  z-index: 100;
   background-color: $color-secundary-dark;
+  box-shadow: $box-sahdow;
 
   &__list {
     padding: 1.5rem;
@@ -26,7 +28,7 @@
     @include transition(.3s);
 
     &:hover {
-      color: $color-aux-dark;
+      color: $color-aux;
     }
   }
 }

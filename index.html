@@ -78,7 +78,7 @@
       </nav>
     </section>
     <main id="main">
-      <div class="intro">
+      <div class="intro skew skew--rigth">
         <h1 class="intro__name">Rolando José Rojo Jimenez.</h1>
         <div class="intro__info">
           <h6 class="intro__title">Introduction</h6>
@@ -91,51 +91,55 @@
         </div>
       </div>
     </main>
-    <section class="about" id="about">
-      <div class="about__info">
-        <h1 class="title title--about">About</h1>
-        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, quaerat tempora quam deleniti repudiandae voluptatum qui. Reiciendis magnam corporis, officia assumenda quos nihil. Ratione possimus facilis consequuntur quam repellat iusto.
-        Sint eum incidunt eaque, placeat saepe dicta nemo magni praesentium adipisci accusantium! Quod nemo, explicabo nostrum assumenda veritatis quae vitae, adipisci eligendi non ex veniam accusamus vel obcaecati eius nisi!
-        Sequi eaque et culpa repellat in, hic doloremque. Nisi odio, reprehenderit praesentium possimus corporis iste nam facere a ad quae molestias vitae esse eum blanditiis necessitatibus sint nesciunt, omnis nobis!</p>
-        <a href="#contact" class="link">
-          <span class="link__text link--contact">Contact</span>
-          <span class="link__icon"><i class="fas fa-arrow-right"></i></span>
-        </a>
+    <section id="about">
+      <div class="about skew skew--left">
+        <div class="about__info">
+          <h1 class="title title--about">About</h1>
+          <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, quaerat tempora quam deleniti repudiandae voluptatum qui. Reiciendis magnam corporis, officia assumenda quos nihil. Ratione possimus facilis consequuntur quam repellat iusto.
+          Sint eum incidunt eaque, placeat saepe dicta nemo magni praesentium adipisci accusantium! Quod nemo, explicabo nostrum assumenda veritatis quae vitae, adipisci eligendi non ex veniam accusamus vel obcaecati eius nisi!
+          Sequi eaque et culpa repellat in, hic doloremque. Nisi odio, reprehenderit praesentium possimus corporis iste nam facere a ad quae molestias vitae esse eum blanditiis necessitatibus sint nesciunt, omnis nobis!</p>
+          <a href="#contact" class="link">
+            <span class="link__text link--contact">Contact</span>
+            <span class="link__icon"><i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+        <figure class="about__picture">
+          <img src="https://rolandorojodotcom.files.wordpress.com/2021/01/foto-perfil-web.jpg?w=813 813w, https://rolandorojodotcom.files.wordpress.com/2021/01/foto-perfil-web.jpg?w=1626 1626w, https://rolandorojodotcom.files.wordpress.com/2021/01/foto-perfil-web.jpg?w=119 119w, https://rolandorojodotcom.files.wordpress.com/2021/01/foto-perfil-web.jpg?w=238 238w, https://rolandorojodotcom.files.wordpress.com/2021/01/foto-perfil-web.jpg?w=768 768w" alt="Profile image" class="about__image">
+        </figure>
       </div>
-      <figure class="about__picture">
-        <img src="https://rolandorojodotcom.files.wordpress.com/2021/01/foto-perfil-web.jpg?w=813 813w, https://rolandorojodotcom.files.wordpress.com/2021/01/foto-perfil-web.jpg?w=1626 1626w, https://rolandorojodotcom.files.wordpress.com/2021/01/foto-perfil-web.jpg?w=119 119w, https://rolandorojodotcom.files.wordpress.com/2021/01/foto-perfil-web.jpg?w=238 238w, https://rolandorojodotcom.files.wordpress.com/2021/01/foto-perfil-web.jpg?w=768 768w" alt="Profile image" class="about__image">
-      </figure>
     </section>
-    <section class="companies" id="companies">
-      <h1 class="title title--companies">Companies</h1>
-      <div class="companies__list">
-        <article class="company" >
-          <figure class="company__picture" id="spotify" onclick="viewInfo(this.id)">
-            <img src="https://www.vectorlogo.zone/logos/spotify/spotify-ar21.svg" alt="Company image" title="Sporify music" class="company__image">
-          </figure>
-          <div class="company__info">
-            <h4 class="company__name">Spotify</h4>
-            <p class="company__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid, ex quam dolorum quisquam voluptates dolorem eius nisi obcaecati id?</p>
-          </div>
-        </article>
-        <article class="company" >
-          <figure class="company__picture" id="bose" onclick="viewInfo(this.id)">
-            <img src="https://www.vectorlogo.zone/logos/bose/bose-ar21.svg" alt="Company image" title="Bose" class="company__image">
-          </figure>
-          <div class="company__info">
-            <h4 class="company__name">Bose</h4>
-            <p class="company__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid, ex quam dolorum quisquam voluptates dolorem eius nisi obcaecati id?</p>
-          </div>
-        </article>
-        <article class="company">
-          <figure class="company__picture" id="apple" onclick="viewInfo(this.id)">
-            <img src="https://www.vectorlogo.zone/logos/apple_appstore/apple_appstore-ar21.svg" alt="Company image" title="Apple music" class="company__image">
-          </figure>
-          <div class="company__info">
-            <h4 class="company__name">Apple music</h4>
-            <p class="company__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid, ex quam dolorum quisquam voluptates dolorem eius nisi obcaecati id?</p>
-          </div>
-        </article>
+    <section id="companies">
+      <div class="companies skew skew--center-down">
+        <h1 class="title title--companies">Companies</h1>
+        <div class="companies__list">
+          <article class="company" >
+            <figure class="company__picture" id="spotify" onclick="viewInfo(this.id)">
+              <img src="https://www.vectorlogo.zone/logos/spotify/spotify-ar21.svg" alt="Company image" title="Sporify music" class="company__image">
+            </figure>
+            <div class="company__info">
+              <h4 class="company__name">Spotify</h4>
+              <p class="company__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid, ex quam dolorum quisquam voluptates dolorem eius nisi obcaecati id?</p>
+            </div>
+          </article>
+          <article class="company" >
+            <figure class="company__picture" id="bose" onclick="viewInfo(this.id)">
+              <img src="https://www.vectorlogo.zone/logos/bose/bose-ar21.svg" alt="Company image" title="Bose" class="company__image">
+            </figure>
+            <div class="company__info">
+              <h4 class="company__name">Bose</h4>
+              <p class="company__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid, ex quam dolorum quisquam voluptates dolorem eius nisi obcaecati id?</p>
+            </div>
+          </article>
+          <article class="company">
+            <figure class="company__picture" id="apple" onclick="viewInfo(this.id)">
+              <img src="https://www.vectorlogo.zone/logos/apple_appstore/apple_appstore-ar21.svg" alt="Company image" title="Apple music" class="company__image">
+            </figure>
+            <div class="company__info">
+              <h4 class="company__name">Apple music</h4>
+              <p class="company__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid, ex quam dolorum quisquam voluptates dolorem eius nisi obcaecati id?</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
     <section class="works" id="works">
@@ -160,8 +164,8 @@
       </div>
     </section>
     <!-- TODO: Add autocomplete ratered information for inputs -->
-    <section class="contact" id="contact">
-      <div class="contact__container">
+    <section id="contact">
+      <div class="contact skew skew--center-top">
         <h1 class="title title--contact">Contact</h1>
         <form action="" class="contact__form" method="POST">
           <div class="input-container input-container__names input-container--name">

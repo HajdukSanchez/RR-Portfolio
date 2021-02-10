@@ -16,6 +16,31 @@
   Animations
 \*************************************************************/
 /*************************************************************\
+  Skews components
+\*************************************************************/
+.skew {
+  width: 100%;
+  height: 5rem;
+  z-index: 1;
+}
+.skew--rigth {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+.skew--left {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+.skew--center-down {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+          clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+}
+.skew--center-top {
+  -webkit-clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 0 100%);
+          clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 0 100%);
+}
+
+/*************************************************************\
   Globals
 \*************************************************************/
 /* Developed by Jozek Andrzej Hajduk Sánchez */
@@ -41,8 +66,22 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 100;
   background-color: #333646;
+  box-shadow: -0.1rem 0.1rem 0.8rem 0.3rem rgba(0, 0, 0, 0.3);
   padding: 0.5rem 30rem;
+}
+
+main {
+  background-color: #252734;
+}
+
+#about {
+  background-color: #333646;
+}
+
+#companies, #contact {
+  background-color: #252734;
 }
 
 a {
@@ -167,7 +206,9 @@ footer {
   top: calc(30%);
   border-bottom-right-radius: 2rem;
   border-top-right-radius: 2rem;
+  z-index: 100;
   background-color: #252734;
+  box-shadow: -0.1rem 0.1rem 0.8rem 0.3rem rgba(0, 0, 0, 0.3);
 }
 .scl-net__list {
   padding: 1.5rem;
@@ -182,7 +223,7 @@ footer {
   transition: 0.3s ease all;
 }
 .scl-net__image:hover {
-  color: #666874;
+  color: #ffaf29;
 }
 
 /*************************************************************\
@@ -285,11 +326,16 @@ footer {
   Links
 \*************************************************************/
 .link {
+  padding: 1rem;
   font-weight: 900;
   color: #ffaf29;
+  border-radius: 0.6rem;
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
   transition: 0.3s ease all;
+}
+.link:hover {
+  background-color: #666874;
 }
 .link__text {
   margin-right: 1rem;
@@ -311,6 +357,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: auto;
   background-color: #252734;
   padding: 5rem 30rem;
 }
@@ -351,6 +398,7 @@ footer {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  box-shadow: -0.1rem 0.1rem 0.8rem 0.3rem rgba(0, 0, 0, 0.3);
 }
 
 /*************************************************************\
@@ -361,8 +409,10 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
+  height: auto;
   background-color: #333646;
   padding: 7rem 30rem;
+  transition: 0.5s ease all;
 }
 .companies__list {
   display: flex;
@@ -383,10 +433,12 @@ footer {
   border-top-right-radius: 0.7rem;
   background: #666874;
   cursor: pointer;
+  box-shadow: -0.1rem 0.1rem 0.8rem 0.3rem rgba(0, 0, 0, 0.3);
 }
 .company__picture.active + .company__info {
-  transform: scaleY(100%);
+  height: 100%;
   opacity: 1;
+  box-shadow: -0.1rem 0.1rem 0.8rem 0.3rem rgba(0, 0, 0, 0.3);
 }
 .company__image {
   width: 100%;
@@ -395,14 +447,14 @@ footer {
      object-fit: cover;
 }
 .company__info {
-  height: 0%;
+  height: 0;
   opacity: 0;
   padding: 2rem;
   border-bottom-left-radius: 0.7rem;
   border-bottom-right-radius: 0.7rem;
   border-top: 0;
   background: #252734;
-  transition: 0.3s ease all;
+  transition: 0.5s ease all;
 }
 .company__name {
   padding-bottom: 1rem;
@@ -484,6 +536,7 @@ footer {
 \*************************************************************/
 .contact {
   width: 100%;
+  height: auto;
   background-color: #333646;
   padding: 7rem 30rem;
 }

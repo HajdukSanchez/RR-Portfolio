@@ -24,8 +24,22 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 100;
   background-color: $color-primary-dark;
+  box-shadow: $box-sahdow;
   @include padding(.5rem);
+}
+
+main {
+  background-color: $color-secundary-dark;
+}
+
+#about {
+  background-color: $color-primary-dark;
+}
+
+#companies, #contact {
+  background-color: $color-secundary-dark;
 }
 
 a {
