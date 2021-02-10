@@ -53,12 +53,6 @@
             <span><i class="fas fa-sun" title="Ligth"></i></span>
           </button>
         </div>
-        <div class="toggles__toggle" title="Language">
-          <button class="switch switch--lang" id="switch-lang">
-            <span><img src="images/ico-usa-16.png" alt="Icon for languege mode" title="En"></span>
-            <span><img src="images/ico-venezuela-16.png" alt="Icon for languege mode" title="Es"></span>
-          </button>
-        </div>
       </div>
     </header>
     <section class="scl-net">
@@ -167,17 +161,17 @@
     <section id="contact">
       <div class="contact skew skew--center-top">
         <h1 class="title title--contact">Contact</h1>
-        <form action="" class="contact__form" method="POST">
+        <form action="" class="contact__form" autocomplete="on">
           <div class="input-container input-container__names input-container--name">
-            <input type="text" class="input__text" id="f-name" name="name" placeholder=" " autocomplete="name" required>
+            <input type="text" class="input__text" id="f-name" name="name" placeholder=" " required>
             <label for="f-name" class="input__label">Name</label>
           </div>
           <div class="input-container input-container__names input-container--lastName">
-            <input type="text" class="input__text" id="f-lastName" name="last-name" placeholder=" " autocomplete="name" required>
+            <input type="text" class="input__text" id="f-lastName" name="last-name" placeholder=" " required>
             <label for="f-lastName" class="input__label">Last Name</label>
           </div>
           <div class="input-container input-container__info input-container--mail">
-            <input type="email" class="input__text" id="f-mail" name="mail" placeholder=" " autocomplete="email" required>
+            <input type="email" class="input__text" id="f-mail" name="mail" placeholder=" " autocomplete="off" required>
             <label for="f-mail" class="input__label">Mail</label>
           </div>
           <div class="input-container input-container__info input-container--msm">

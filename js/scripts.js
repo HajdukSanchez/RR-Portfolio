@@ -2,11 +2,8 @@
 
 // Body
 const $body = document.querySelector('body');
-// Theme and Language mode
+// Theme mode
 const $btn_swicth_theme = document.getElementById('switch-theme');
-const $btn_swicth_lang = document.getElementById('switch-lang');
-// a elements
-const $a = document.querySelectorAll('a');
 
 $btn_swicth_theme.addEventListener('click', () => {
   /* Change theme */
@@ -15,15 +12,6 @@ $btn_swicth_theme.addEventListener('click', () => {
   // Add selection to localStorage
   const theme_mode = ($body.classList.contains('ligth-mode')) ? 'true' : 'false';
   localStorage.setItem('ligth-mode', theme_mode);
-});
-
-// TODO: Add language mode changing
-$btn_swicth_lang.addEventListener('click', () => {
-  /* Change language */
-  $btn_swicth_lang.classList.toggle('active');
-  // Add selection to localStorage
-  const lang_mode = ($body.classList.contains('lang-es')) ? 'true' : 'false';
-  localStorage.setItem('lang-es', lang_mode);
 });
 
 // Function to show the company information
@@ -45,15 +33,5 @@ function viewInfo(id) {
       $btn_swicth_theme.classList.remove('active');
     }
   }
-  // Evaluate language
-  function evaluateLanguage() {
-    if (localStorage.getItem('lang-es') === 'true') {
-      $btn_swicth_lang.classList.add('active');
-    } else {
-      $btn_swicth_lang.classList.remove('active');
-    }
-  }
-
   evaluateTheme();
-  evaluateLanguage();
 })()
