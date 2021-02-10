@@ -1,0 +1,35 @@
+/*************************************************************\
+  Footer section
+\*************************************************************/
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding-top: 2rem;
+  border-top: .1rem solid $color-text-secundary-dark;
+  @include font();
+
+  &__info {
+    grid-column: 1/2;
+    justify-self: self-start;
+    color: $color-text-secundary-dark;
+  }
+
+  &__text {
+    grid-column: 2/3;
+    justify-self: center;
+    color: $color-bg-aux;
+  }
+
+  &__picture {
+    grid-column: 3/4;
+    justify-self: self-end;
+    width: 6rem;
+    padding-right: 2rem;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}

@@ -77,16 +77,18 @@
         </ul>
       </nav>
     </section>
-    <main class="intro" id="main">
-      <h1 class="intro__name">Rolando José Rojo Jimenez.</h1>
-      <div class="intro__info">
-        <h6 class="intro__title">Introduction</h6>
-        <h2 class="intro__profesion">Live Sound Engineer</h2>
-        <p class="intro__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, quidem amet maxime molestiae iste numquam iure sint temporibus corporis eos!</p>
-        <a href="#about" class="link">
-          <span class="link__text link--story">My story</span>
-          <span class="link__icon"><i class="fas fa-arrow-right"></i></span>
-        </a>
+    <main id="main">
+      <div class="intro">
+        <h1 class="intro__name">Rolando José Rojo Jimenez.</h1>
+        <div class="intro__info">
+          <h6 class="intro__title">Introduction</h6>
+          <h2 class="intro__profesion">Live Sound Engineer</h2>
+          <p class="intro__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, quidem amet maxime molestiae iste numquam iure sint temporibus corporis eos!</p>
+          <a href="#about" class="link">
+            <span class="link__text link--story">My story</span>
+            <span class="link__icon"><i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
       </div>
     </main>
     <section class="about" id="about">
@@ -107,7 +109,7 @@
     <section class="companies" id="companies">
       <h1 class="title title--companies">Companies</h1>
       <div class="companies__list">
-        <div class="company" >
+        <article class="company" >
           <figure class="company__picture" id="spotify" onclick="viewInfo(this.id)">
             <img src="https://www.vectorlogo.zone/logos/spotify/spotify-ar21.svg" alt="Company image" title="Sporify music" class="company__image">
           </figure>
@@ -115,8 +117,8 @@
             <h4 class="company__name">Spotify</h4>
             <p class="company__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid, ex quam dolorum quisquam voluptates dolorem eius nisi obcaecati id?</p>
           </div>
-        </div>
-        <div class="company" >
+        </article>
+        <article class="company" >
           <figure class="company__picture" id="bose" onclick="viewInfo(this.id)">
             <img src="https://www.vectorlogo.zone/logos/bose/bose-ar21.svg" alt="Company image" title="Bose" class="company__image">
           </figure>
@@ -124,8 +126,8 @@
             <h4 class="company__name">Bose</h4>
             <p class="company__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid, ex quam dolorum quisquam voluptates dolorem eius nisi obcaecati id?</p>
           </div>
-        </div>
-        <div class="company">
+        </article>
+        <article class="company">
           <figure class="company__picture" id="apple" onclick="viewInfo(this.id)">
             <img src="https://www.vectorlogo.zone/logos/apple_appstore/apple_appstore-ar21.svg" alt="Company image" title="Apple music" class="company__image">
           </figure>
@@ -133,7 +135,7 @@
             <h4 class="company__name">Apple music</h4>
             <p class="company__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquid, ex quam dolorum quisquam voluptates dolorem eius nisi obcaecati id?</p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
     <section class="works" id="works">
@@ -181,9 +183,22 @@
             <textarea type="text" name="message" id="f-message" placeholder=" " class="input__text input__text--msm"></textarea>
             <label for="f-message" class="input__label">Send a Message (Optional)</label>
           </div>
+          <div class="input-container input-container__info input-container--btn">
+            <input type="submit" value="Send" class="btn btn--send">
+          </div>
         </form>
       </div>
     </section>
+    <footer>
+      <div class="footer">
+        <h6 class="footer__info">© Rolando Rojo | 2021 - 1</h6>
+        <h3 class="footer__text">Thanks for scrolling !</h3>
+        <!-- TODO: Created link to Jozek Hajduk Web site -->
+        <figure class="footer__picture">
+          <img src="images/personal-logo-black.png" alt="Picture creator web site" class="footer__image">
+        </figure>
+      </div>
+    </footer>
     <script src="js/scripts.js"></script>
   </body>
 </html>

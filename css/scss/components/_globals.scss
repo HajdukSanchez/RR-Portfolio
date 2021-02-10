@@ -36,3 +36,9 @@ a {
 ul {
   list-style: none;
 }
+
+
+footer {
+  background-color: $color-bg-secundary-dark;
+  @include padding(14rem);
+}
