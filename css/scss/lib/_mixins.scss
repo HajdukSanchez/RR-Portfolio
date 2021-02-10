@@ -43,3 +43,12 @@
   margin-bottom: $margin-bottom;
   background-color: $color-bg-aux;
 }
+
+@mixin input__form ($color_text: $color-bg-aux) {
+  top: -1.2rem;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+  border-radius: inherit;
+  background-color: $color-bg-secundary-dark;
+  color: $color_text;
+}

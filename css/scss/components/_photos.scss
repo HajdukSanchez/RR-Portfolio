@@ -1,0 +1,53 @@
+/*************************************************************\
+  Photos container
+\*************************************************************/
+
+.photos {
+  display: grid;
+  grid-template: repeat(2, minmax(50%, 20rem)) / repeat(5, minmax(20%, 20rem));
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  padding: .5rem;
+  border-radius: .6rem;
+
+  &--big {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+
+  &--medium-h {
+    grid-column: 3/5;
+    grid-row: 1/2;
+  }
+
+  &--medium-v {
+    grid-column: 5/-1;
+    grid-row: 1/-1;
+  }
+
+  &--small-left {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
+  &--small-center {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
+  &--small-rigth {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center center;
+    border-radius: inherit;
+  }
+}
