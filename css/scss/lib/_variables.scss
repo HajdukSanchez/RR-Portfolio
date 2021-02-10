@@ -7,7 +7,7 @@
 // Color
 $color-aux: #ffaf29;
 // Font
-$font-size-text: 1.8rem;
+$font-size-text: 1.6rem;
 $font-size-titles: 3.6rem;
 $font-family: 'Open Sans', sans-serif;
 // Border
@@ -17,7 +17,7 @@ $border-color: transparent;
 // Toggles
 $tgl-size: 3rem;
 // Transition
-$transition-time-default: .5s;
+$transition-time-default: 1s;
 // Shadow
 $box-sahdow: -.1rem .1rem .8rem .3rem rgba(0, 0, 0, .3);
 
@@ -31,3 +31,13 @@ $color-aux-dark: #666874;
 // Text
 $color-text-primary-dark: #f3f3f4;
 $color-text-secundary-dark: #666874;
+
+/* =========== Ligth =========== */
+/* ============================ */
+// Background
+$color-primary-ligth: #f0eaea;
+$color-secundary-ligth: #a3a3a3;
+$color-aux-ligth: #434343;
+// Text
+$color-text-primary-ligth: #1a1a1a;
+$color-text-secundary-ligth: #2b2b2b;

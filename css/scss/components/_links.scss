@@ -12,6 +12,10 @@
 
   &:hover {
     background-color: $color-aux-dark;
+
+    body.ligth-mode & {
+      background-color: $color-primary-ligth;
+    }
   }
 
   &__text {

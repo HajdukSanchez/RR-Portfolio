@@ -5,11 +5,20 @@
 .works {
   background-color: $color-secundary-dark;
   @include padding(7rem);
+  @include transition();
+
+  body.ligth-mode & {
+    background-color: $color-secundary-ligth;
+  }
 
   &__description {
     padding-bottom: 7rem;
     text-align: justify;
     color: $color-text-secundary-dark;
     @include font();
+
+    body.ligth-mode & {
+      color: $color-text-secundary-ligth;
+    }
   }
 }

@@ -40,6 +40,10 @@
     align-items: center;
     color: $color-text-primary-dark;
     @include font();
+
+    body.ligth-mode & {
+      color: $color-text-primary-ligth;
+    }
   }
 
   &__text {

@@ -10,10 +10,18 @@
   border-top: .1rem solid $color-aux-dark;
   @include font();
 
+  body.ligth-mode & {
+    border-top-color: $color-aux-ligth;
+  }
+
   &__info {
     grid-column: 1/2;
     justify-self: self-start;
     color: $color-text-secundary-dark;
+
+    body.ligth-mode & {
+      color: $color-text-secundary-ligth;
+    }
   }
 
   &__text {

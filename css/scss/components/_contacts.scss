@@ -7,6 +7,11 @@
   height: auto;
   background-color: $color-primary-dark;
   @include padding(7rem);
+  @include transition();
+
+  body.ligth-mode & {
+    background-color: $color-primary-ligth;
+  }
 
   &__form {
     display: grid;
@@ -76,13 +81,14 @@
     color: $color-text-secundary-dark;
     @include transition(.3s);
 
+    body.ligth-mode & {
+      background-color: $color-secundary-ligth;
+      color: $color-text-secundary-ligth;
+    }
+
     &:focus {
       border-color: $color-aux;
     }
-
-    // &:not(:placeholder-shown).input__text:not(:focus) {
-    //   border-color: $color-bg-aux;
-    // }
 
     &--msm {
       height: 100%;
@@ -90,6 +96,15 @@
       resize: none;
       overflow-y: auto;
       @include font($font-size-text);
+      @include scroll_element;
+
+      body.ligth-mode &::-webkit-scrollbar-thumb {
+        background-color: $color-primary-ligth;
+      }
+
+      body.ligth-mode &::-webkit-scrollbar-track {
+        background-color:$color-secundary-ligth;
+      }
     }
   }
 
@@ -100,6 +115,10 @@
     color: $color-text-secundary-dark;
     @include transition(.3s);
     @include font();
+
+    body.ligth-mode & {
+      color: $color-text-secundary-ligth;
+    }
 
     .input__text:focus + & {
       @include input__form();
@@ -116,18 +135,22 @@
   &--send {
     width: 100%;
     height: 100%;
-    border: .2rem solid $color-aux;
     border-radius: inherit;
     background-color: transparent;
-    color: $color-aux;
     outline: none;
     cursor: pointer;
+    border: .2rem solid $color-aux;
+    color: $color-aux;
     @include transition();
     @include font();
 
     &:hover {
       background-color: $color-aux;
       color: $color-text-primary-dark;
+
+      body.ligth-mode & {
+        color: $color-text-primary-ligth;
+      }
     }
   }
 }

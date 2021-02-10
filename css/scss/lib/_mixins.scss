@@ -32,14 +32,18 @@
 }
 
 // Style fo the section titles
-@mixin titles($direction: column) {
+@mixin titles ($direction: column) {
   display: flex;
   flex-direction: $direction;
   color: $color-text-primary-dark;
+
+  body.ligth-mode & {
+    color: $color-text-primary-ligth;
+  }
 }
 
 // Style for the pseudoelement titles
-@mixin titles_pseudoElement($width: 8rem, $margin-bottom: .5rem) {
+@mixin titles_pseudoElement ($width: 8rem, $margin-bottom: .5rem) {
   content: "";
   width: $width;
   height: .5rem;
@@ -55,4 +59,23 @@
   border-radius: inherit;
   background-color: $color-secundary-dark;
   color: $color_text;
+
+  body.ligth-mode & {
+    background-color: $color-secundary-ligth;
+  }
+}
+
+@mixin scroll_element () {
+  &::-webkit-scrollbar {
+    width: 1.3rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2rem;
+    background-color: $color-primary-dark;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color:$color-secundary-dark;
+  }
 }

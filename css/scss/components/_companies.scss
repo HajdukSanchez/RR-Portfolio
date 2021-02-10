@@ -12,6 +12,10 @@
   @include padding(7rem);
   @include transition();
 
+  body.ligth-mode & {
+    background-color: $color-primary-ligth;
+  }
+
   &__list {
     display: flex;
     flex-direction: row;
@@ -30,15 +34,24 @@
     padding: 1rem 3rem;
     border-top-left-radius: .7rem;
     border-top-right-radius: .7rem;
-    background: $color-aux-dark;
     cursor: pointer;
+    background-color: $color-aux-dark;
     box-shadow: $box-sahdow;
+
+    body.ligth-mode & {
+      box-shadow: none;
+      background-color: $color-secundary-ligth;
+    }
   }
 
   &__picture.active + &__info {
     height: 100%;
     opacity: 1;
     box-shadow: $box-sahdow;
+
+    body.ligth-mode & {
+      box-shadow: none;
+    }
   }
 
   &__image {
@@ -54,8 +67,12 @@
     border-bottom-left-radius: .7rem;
     border-bottom-right-radius: .7rem;
     border-top: 0;
-    background: $color-secundary-dark;
+    background-color: $color-secundary-dark;
     @include transition();
+
+    body.ligth-mode & {
+      background-color: $color-aux;
+    }
   }
 
   &__name {
@@ -63,10 +80,18 @@
     font-weight: 900;
     color: $color-text-primary-dark;
     @include font(1.7rem);
+
+    body.ligth-mode & {
+      color: $color-text-primary-ligth;
+    }
   }
 
   &__description {
     color: $color-text-secundary-dark;
     @include font(1.6rem);
+
+    body.ligth-mode & {
+      color: $color-text-secundary-ligth;
+    }
   }
 }

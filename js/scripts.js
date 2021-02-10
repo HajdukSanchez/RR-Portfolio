@@ -5,6 +5,8 @@ const $body = document.querySelector('body');
 // Theme and Language mode
 const $btn_swicth_theme = document.getElementById('switch-theme');
 const $btn_swicth_lang = document.getElementById('switch-lang');
+// a elements
+const $a = document.querySelectorAll('a');
 
 $btn_swicth_theme.addEventListener('click', () => {
   /* Change theme */

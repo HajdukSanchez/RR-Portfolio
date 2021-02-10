@@ -11,11 +11,21 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: $font-family;
-  @include transition;
+  @include transition();
+  @include scroll_element;
+
+  &.ligth-mode::-webkit-scrollbar-thumb {
+    background-color: $color-primary-ligth;
+  }
+
+  &.ligth-mode::-webkit-scrollbar-track {
+    background-color:$color-secundary-ligth;
+  }
 }
 
 header {
@@ -28,19 +38,31 @@ header {
   background-color: $color-primary-dark;
   box-shadow: $box-sahdow;
   @include padding(.5rem);
+  @include transition();
+
+  body.ligth-mode & {
+    background-color: $color-primary-ligth;
+  }
 }
 
-main {
+main, #companies, #contact {
   background-color: $color-secundary-dark;
+  @include transition();
+
+  body.ligth-mode & {
+    background-color: $color-secundary-ligth;
+  }
 }
 
 #about {
   background-color: $color-primary-dark;
+  @include transition();
+
+  body.ligth-mode & {
+    background-color: $color-primary-ligth;
+  }
 }
 
-#companies, #contact {
-  background-color: $color-secundary-dark;
-}
 
 a {
   text-decoration: none;
@@ -55,4 +77,9 @@ ul {
 footer {
   background-color: $color-secundary-dark;
   @include padding(14rem);
+  @include transition();
+
+  body.ligth-mode & {
+    background-color: $color-secundary-ligth;
+  }
 }

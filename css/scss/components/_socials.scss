@@ -10,6 +10,11 @@
   z-index: 100;
   background-color: $color-secundary-dark;
   box-shadow: $box-sahdow;
+  @include transition();
+
+  body.ligth-mode & {
+    background-color: $color-primary-ligth;
+  }
 
   &__list {
     padding: 1.5rem;
@@ -27,8 +32,16 @@
     @include font(3rem);
     @include transition(.3s);
 
+    body.ligth-mode & {
+      color: $color-text-primary-ligth;
+    }
+
     &:hover {
       color: $color-aux;
+
+      body.ligth-mode & {
+        color: $color-aux;
+      }
     }
   }
 }

@@ -11,6 +11,11 @@
   height: auto;
   background-color: $color-secundary-dark;
   @include padding(5rem);
+  @include transition();
+
+  body.ligth-mode & {
+    background-color: $color-secundary-ligth;
+  }
 
   &__info {
     width: 50%;
@@ -31,6 +36,10 @@
     font-size: 1.8rem;
     text-align: justify;
     color: $color-text-secundary-dark;
+
+    body.ligth-mode & {
+      color: $color-text-secundary-ligth;
+    }
   }
 
   &__picture {
