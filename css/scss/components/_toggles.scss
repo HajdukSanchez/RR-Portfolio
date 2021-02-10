@@ -32,7 +32,7 @@
         bottom: 0;
         transition-timing-function: cubic-bezier(.55,1.03,.8,.77);
         box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, .2);
-        background-color: $color-bg-aux;
+        background-color: $color-aux;
         @include toggles;
         @include transition;
       }

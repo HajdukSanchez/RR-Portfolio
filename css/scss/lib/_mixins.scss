@@ -8,7 +8,7 @@
 }
 
 // Font size and family auto
-@mixin font ($size: $font-size) {
+@mixin font ($size: $font-size-text) {
   font-size: $size;
   font-family: $font-family;
 }
@@ -26,29 +26,33 @@
   border-radius: 50%;
 }
 
-@mixin transition ($time: $transition-time) {
+// Transition mode for the elements
+@mixin transition ($time: $transition-time-default) {
   transition: $time ease all;
 }
 
+// Style fo the section titles
 @mixin titles($direction: column) {
   display: flex;
   flex-direction: $direction;
   color: $color-text-primary-dark;
 }
 
+// Style for the pseudoelement titles
 @mixin titles_pseudoElement($width: 8rem, $margin-bottom: .5rem) {
   content: "";
   width: $width;
   height: .5rem;
   margin-bottom: $margin-bottom;
-  background-color: $color-bg-aux;
+  background-color: $color-aux;
 }
 
-@mixin input__form ($color_text: $color-bg-aux) {
+// Style for interaction with the input form containers
+@mixin input__form ($color_text: $color-aux) {
   top: -1.2rem;
   padding: 0 1rem;
   font-size: 1.4rem;
   border-radius: inherit;
-  background-color: $color-bg-secundary-dark;
+  background-color: $color-secundary-dark;
   color: $color_text;
 }

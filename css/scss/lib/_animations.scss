@@ -1,22 +1,3 @@
 /*************************************************************\
   Animations
 \*************************************************************/
-
-// Left scroll for the slider
-@keyframes scroll_slider--left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-20rem * 7));
-  }
-}
-// Right scroll for the slider
-@keyframes scroll_slider--rigth {
-  0% {
-    transform: translateX(calc(-20rem * 7));
-  }
-  100% {
-    transform: translateX(0);
-  }
-}

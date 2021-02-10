@@ -7,7 +7,7 @@
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   padding-top: 2rem;
-  border-top: .1rem solid $color-text-secundary-dark;
+  border-top: .1rem solid $color-aux-dark;
   @include font();
 
   &__info {
@@ -19,7 +19,7 @@
   &__text {
     grid-column: 2/3;
     justify-self: center;
-    color: $color-bg-aux;
+    color: $color-aux;
   }
 
   &__picture {

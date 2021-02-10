@@ -24,7 +24,7 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: $color-bg-primary-dark;
+  background-color: $color-primary-dark;
   @include padding(.5rem);
 }
 
@@ -39,6 +39,6 @@ ul {
 
 
 footer {
-  background-color: $color-bg-secundary-dark;
+  background-color: $color-secundary-dark;
   @include padding(14rem);
 }

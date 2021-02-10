@@ -5,12 +5,11 @@
 /* =========== Globals =========== */
 /* ============================ */
 // Color
-$color-bg-aux: #ffaf29;
-$color-text-aux: #e9b258;
+$color-aux: #ffaf29;
 // Font
-$font-size: 1.8rem;
-$font-family: 'Open Sans', sans-serif;
+$font-size-text: 1.8rem;
 $font-size-titles: 3.6rem;
+$font-family: 'Open Sans', sans-serif;
 // Border
 $border-radius: 2rem;
 $border-size: .1rem;
@@ -18,16 +17,14 @@ $border-color: transparent;
 // Toggles
 $tgl-size: 3rem;
 // Transition
-$transition-time: .5s;
-// Picture slider
-$slider-size: 20rem;
+$transition-time-default: .5s;
 
 /* =========== Dark =========== */
 /* ============================ */
 // Background
-$color-bg-primary-dark: #333646;
-$color-bg-secundary-dark: #252734;
+$color-primary-dark: #333646;
+$color-secundary-dark: #252734;
+$color-aux-dark: #666874;
 // Text
 $color-text-primary-dark: #f3f3f4;
 $color-text-secundary-dark: #666874;
-$color-text-aux-dark: #b6b7bd;

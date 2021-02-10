@@ -7,7 +7,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  background-color: $color-bg-primary-dark;
+  background-color: $color-primary-dark;
   @include padding(7rem);
 
   &__list {
@@ -28,12 +28,11 @@
     padding: 1rem 3rem;
     border-top-left-radius: .7rem;
     border-top-right-radius: .7rem;
-    background: $color-text-secundary-dark;
+    background: $color-aux-dark;
     cursor: pointer;
   }
 
   &__picture.active + &__info {
-    // height: 100%;
     transform: scaleY(100%);
     opacity: 1;
   }
@@ -51,7 +50,7 @@
     border-bottom-left-radius: .7rem;
     border-bottom-right-radius: .7rem;
     border-top: 0;
-    background: $color-bg-secundary-dark;
+    background: $color-secundary-dark;
     @include transition(.3s);
   }
 

@@ -15,38 +15,6 @@
 /*************************************************************\
   Animations
 \*************************************************************/
-@-webkit-keyframes scroll_slider--left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-20rem * 7));
-  }
-}
-@keyframes scroll_slider--left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-20rem * 7));
-  }
-}
-@-webkit-keyframes scroll_slider--rigth {
-  0% {
-    transform: translateX(calc(-20rem * 7));
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes scroll_slider--rigth {
-  0% {
-    transform: translateX(calc(-20rem * 7));
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 /*************************************************************\
   Globals
 \*************************************************************/
@@ -214,7 +182,7 @@ footer {
   transition: 0.3s ease all;
 }
 .scl-net__image:hover {
-  color: #e9b258;
+  color: #666874;
 }
 
 /*************************************************************\
@@ -251,7 +219,7 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: #e9b258;
+  color: #ffaf29;
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
 }
@@ -261,7 +229,7 @@ footer {
   height: 0.3rem;
   display: inline-block;
   margin-right: 1rem;
-  background: #e9b258;
+  background-color: #ffaf29;
 }
 .intro__profesion {
   padding: 2rem 0;
@@ -323,9 +291,6 @@ footer {
   font-family: "Open Sans", sans-serif;
   transition: 0.3s ease all;
 }
-.link:hover {
-  color: #e9b258;
-}
 .link__text {
   margin-right: 1rem;
 }
@@ -354,7 +319,6 @@ footer {
 }
 .about__title {
   padding-bottom: 4rem;
-  color: #f3f3f4;
   display: flex;
   flex-direction: column;
   color: #f3f3f4;

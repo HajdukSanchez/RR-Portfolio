@@ -4,7 +4,7 @@
 
 .contact {
   width: 100%;
-  background-color: $color-bg-primary-dark;
+  background-color: $color-primary-dark;
   @include padding(7rem);
 
   &__form {
@@ -71,12 +71,12 @@
     border: .2rem solid transparent;
     outline: none;
     font-size: 1.8rem;
-    background-color: $color-bg-secundary-dark;
+    background-color: $color-secundary-dark;
     color: $color-text-secundary-dark;
     @include transition(.3s);
 
     &:focus {
-      border-color: $color-bg-aux;
+      border-color: $color-aux;
     }
 
     // &:not(:placeholder-shown).input__text:not(:focus) {
@@ -88,7 +88,7 @@
       padding: 1rem 1rem 1rem 2rem;
       resize: none;
       overflow-y: auto;
-      @include font($font-size);
+      @include font($font-size-text);
     }
   }
 
@@ -115,17 +115,17 @@
   &--send {
     width: 100%;
     height: 100%;
-    border: .2rem solid $color-bg-aux;
+    border: .2rem solid $color-aux;
     border-radius: inherit;
     background-color: transparent;
-    color: $color-bg-aux;
+    color: $color-aux;
     outline: none;
     cursor: pointer;
     @include transition();
     @include font();
 
     &:hover {
-      background-color: $color-bg-aux;
+      background-color: $color-aux;
       color: $color-text-primary-dark;
     }
   }

@@ -4,13 +4,11 @@
 
 .link {
   font-weight: 900;
-  color: $color-bg-aux;
+  color: $color-aux;
   @include font(1.6rem);
   @include transition(.3s);
 
-  &:hover {
-    color: $color-text-aux;
-  }
+  // TODO: CREATE HOVER BOX STYLE
 
   &__text {
     margin-right: 1rem;

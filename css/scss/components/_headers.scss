@@ -47,7 +47,7 @@
     @include border-bottom(.3rem);
 
     .nav__link:hover & {
-      @include border-bottom(.3rem, $color-bg-aux);
+      @include border-bottom(.3rem, $color-aux);
     }
   }
 }
