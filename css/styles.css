@@ -363,14 +363,12 @@ body.ligth-mode .scl-net__image:hover {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  height: 65vh;
-  min-height: 50vh;
-  max-height: 75vh;
+  height: auto;
   background-image: url("https://rolandorojodotcom.files.wordpress.com/2021/01/imagen-inicio-1.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 7rem 30rem;
+  padding: 18rem 30rem;
 }
 @media only screen and (max-width: 1480px) {
   .intro {
