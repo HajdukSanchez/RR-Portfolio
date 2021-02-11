@@ -4,24 +4,32 @@
 
 // Properties for elements with fade efect
 .fade {
-  opacity: .3;
+  opacity: .2;
   @include transition(.5s);
 
   // Fade in animation left to rigth
-  &__rigth {
-    transform: translateX(20%);
+  &--rigth {
+    transform: translateX(200%);
   }
   // Fade in animation rigth to left
-  &__left {
-    transform: translateX(-20%);
+  &--left {
+    transform: translateX(-200%);
   }
-  // Fade in animation bottom to top
-  &__up {
-    transform: translateX(-20%);
+  // Fade in animation bottom to top 100%
+  &--up {
+    transform: translateY(100%);
   }
-  // Fade in animation top to bottom
-  &__down {
-    transform: translateX(20%);
+  // Fade in animation bottom to top 40%
+  &--up-40 {
+    transform: translateY(40%);
+  }
+  // Fade in animation top to bottom -100%
+  &--down {
+    transform: translateY(-100%);
+  }
+  // Fade in animation top to bottom -200%
+  &--down-200 {
+    transform: translateY(-200%);
   }
 }
 

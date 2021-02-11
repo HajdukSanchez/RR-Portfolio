@@ -21,20 +21,26 @@
   Animations
 \*************************************************************/
 .fade {
-  opacity: 0.3;
+  opacity: 0.2;
   transition: 0.5s ease all;
 }
-.fade__rigth {
-  transform: translateX(20%);
+.fade--rigth {
+  transform: translateX(200%);
 }
-.fade__left {
-  transform: translateX(-20%);
+.fade--left {
+  transform: translateX(-200%);
 }
-.fade__up {
-  transform: translateX(-20%);
+.fade--up {
+  transform: translateY(100%);
 }
-.fade__down {
-  transform: translateX(20%);
+.fade--up-40 {
+  transform: translateY(40%);
+}
+.fade--down {
+  transform: translateY(-100%);
+}
+.fade--down-200 {
+  transform: translateY(-200%);
 }
 
 .appear {
@@ -83,6 +89,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-family: "Open Sans", sans-serif;
   transition: 1s ease all;
 }

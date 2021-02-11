@@ -22,14 +22,29 @@ function viewInfo(id) {
 }
 
 // Function For fade effect
-/* window.addEventListener('scroll', () => {
-  const $fade_up = document.querySelectorAll(".fade__up")[0];
-  // 1/4 parts of the window heigth
-  let window_heigth = window.innerHeight / .4;
-  let distance = $fade_up.getBoundingClientRect().top;
-  console.log(window_heigth);
-  console.log(distance);
-}); */
+window.addEventListener('scroll', () => {
+  function fadeIn(direction) {
+    // Fade objects
+    const $fade = document.querySelectorAll(`.fade--${direction}`);
+    for (let i = 0; i < $fade.length; i++) {
+        // 1/4 parts of the window heigth screen
+      let window_heigth = window.innerHeight / 1.4;
+      let distance = $fade[i].getBoundingClientRect().top;
+      $fade[i].classList.add(`fade--${direction}`);
+      if (distance <= window_heigth) {
+        $fade[i].classList.add('appear');
+      } else {
+        $fade[i].classList.remove('appear');
+      }
+    }
+  }
+  fadeIn('up');
+  fadeIn('up-40');
+  fadeIn('down');
+  fadeIn('down-200');
+  fadeIn('rigth');
+  fadeIn('left');
+});
 
 // Function to excecuted on load
 (function onLoad() {
