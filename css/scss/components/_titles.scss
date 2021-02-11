@@ -8,6 +8,10 @@
   @include titles(column);
   @include font($font-size-titles);
 
+  @include media (mobile-s) {
+    font-size: 3rem;
+  }
+
   &::before {
     margin-right: 1rem;
     @include titles_pseudoElement(8rem, 0);

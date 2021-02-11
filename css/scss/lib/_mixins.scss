@@ -3,8 +3,8 @@
 \*************************************************************/
 
 // Padding left and rigth for the containers
-@mixin padding ($top: 0rem) {
-  padding: $top 30rem;
+@mixin padding ($top-bottom: $padding-t-b, $left-rigth: $padding-l-r) {
+  padding: $top-bottom $left-rigth;
 }
 
 // Font size and family auto

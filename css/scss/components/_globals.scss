@@ -40,6 +40,19 @@ header {
   @include padding(.5rem);
   @include transition();
 
+  @include media (desktop-s) {
+    @include padding(.5rem, 2rem);
+  }
+
+  @include media (tablet-l) {
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  @include media (mobile-l) {
+    justify-content: space-between;
+  }
+
   body.ligth-mode & {
     background-color: $color-primary-ligth;
   }
@@ -78,6 +91,18 @@ footer {
   background-color: $color-secundary-dark;
   @include padding(14rem);
   @include transition();
+
+  @include media (desktop-s) {
+    @include padding (14rem, 10rem);
+  }
+
+  @include media (tablet-l) {
+    @include padding (14rem, 5rem);
+  }
+
+  @include media (mobile-l) {
+    padding-top: 7rem;
+  }
 
   body.ligth-mode & {
     background-color: $color-secundary-ligth;

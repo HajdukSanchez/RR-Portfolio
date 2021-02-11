@@ -6,8 +6,20 @@
   width: 100%;
   height: auto;
   background-color: $color-primary-dark;
-  @include padding(7rem);
+  @include padding();
   @include transition();
+
+  @include media (desktop-s) {
+    @include padding($padding-t-b, 20rem);
+  }
+
+  @include media (tablet-l) {
+    @include padding ($padding-t-b, 5rem);
+  }
+
+  @include media (mobile-s) {
+    @include padding ($padding-t-b, 2rem);
+  }
 
   body.ligth-mode & {
     background-color: $color-primary-ligth;
@@ -18,8 +30,17 @@
     grid-template: 1fr 1fr 5fr / repeat(2, 1fr);
     gap: 2rem;
     align-items: center;
-    width: 100%;
+    width: 65%;
     margin: 0 auto;
+
+    @include media (desktop-l) {
+      width: 100%;
+    }
+
+    @include media (mobile-s) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 5fr;
+    }
   }
 }
 
@@ -27,6 +48,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
   height: 5rem;
   border-radius: .4rem;
 
@@ -34,35 +56,47 @@
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     justify-self: flex-end;
+
+    @include media (mobile-s) {
+      grid-column: 1/3;
+    }
   }
 
   &--lastName {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     justify-self: flex-start;
+
+    @include media (mobile-s) {
+      grid-row: 2/3;
+      grid-column: 1/3;
+    }
   }
 
   &--mail {
     grid-row: 2 / 3;
+
+    @include media (mobile-s) {
+      grid-row: 3/4;
+    }
   }
 
   &--msm {
     grid-row: 3 / 4;
     height: 100%;
+
+    @include media (mobile-s) {
+      grid-row: 4/5;
+    }
   }
 
   &--btn {
-    grid-row: 4/5;
-  }
-
-  &__names {
-    width: 40rem;
+    grid-row: 6/7;
   }
 
   &__info {
     grid-column: 1 / 3;
     justify-self: center;
-    width: 82rem;
   }
 }
 

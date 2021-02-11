@@ -10,6 +10,10 @@
   border-top: .1rem solid $color-aux-dark;
   @include font();
 
+  @include media (mobile-s) {
+    grid-template: repeat(3, 1fr)/ 1fr;
+  }
+
   body.ligth-mode & {
     border-top-color: $color-aux-ligth;
   }
@@ -19,6 +23,12 @@
     justify-self: self-start;
     color: $color-text-secundary-dark;
 
+    @include media (mobile-s) {
+      grid-column: 1/-1;
+      grid-row: 2/3;
+      justify-self: center;
+    }
+
     body.ligth-mode & {
       color: $color-text-secundary-ligth;
     }
@@ -27,7 +37,13 @@
   &__text {
     grid-column: 2/3;
     justify-self: center;
+    text-align: center;
     color: $color-aux;
+
+    @include media (mobile-s) {
+      grid-row: 1/2;
+      grid-column: 1/-1;
+    }
   }
 
   &__picture {
@@ -35,6 +51,14 @@
     justify-self: self-end;
     width: 6rem;
     padding-right: 2rem;
+
+    @include media (mobile-s) {
+      grid-column: 1/-1;
+      grid-row: 3/4;
+      justify-self: center;
+      padding: 0;
+      padding-top: .5rem;
+    }
   }
 
   &__image {

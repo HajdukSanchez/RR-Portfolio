@@ -12,6 +12,10 @@
   box-shadow: $box-sahdow;
   @include transition();
 
+  @include media (mobile-s) {
+    opacity: .8;
+  }
+
   body.ligth-mode & {
     background-color: $color-primary-ligth;
   }

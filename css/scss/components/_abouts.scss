@@ -5,13 +5,26 @@
 .about {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: auto;
   background-color: $color-secundary-dark;
-  @include padding(5rem);
+  @include padding();
   @include transition();
+
+  @include media (desktop-s) {
+    @include padding($padding-t-b, 20rem);
+  }
+
+  @include media (tablet-l) {
+    @include padding ($padding-t-b, 5rem);
+  }
+
+  @include media (mobile-s) {
+    @include padding (11rem, 2rem);
+  }
 
   body.ligth-mode & {
     background-color: $color-secundary-ligth;
@@ -19,6 +32,10 @@
 
   &__info {
     width: 50%;
+
+    @include media (desktop-l) {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -48,6 +65,15 @@
     align-items: center;
     width: 50%;
     padding: 4rem;
+
+    @include media (desktop-l) {
+      width: 100%;
+      justify-content: center;
+    }
+
+    @include media (mobile-s) {
+      display: none;
+    }
   }
 
   &__image {
@@ -56,5 +82,10 @@
     border-radius: 50%;
     object-fit: cover;
     box-shadow: $box-sahdow;
+
+    @include media (mobile-l) {
+      width: 25rem;
+      height: 25rem;
+    }
   }
 }

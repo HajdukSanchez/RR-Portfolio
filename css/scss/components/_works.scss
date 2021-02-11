@@ -4,8 +4,20 @@
 
 .works {
   background-color: $color-secundary-dark;
-  @include padding(7rem);
+  @include padding();
   @include transition();
+
+  @include media (desktop-s) {
+    @include padding ($padding-t-b, 20rem);
+  }
+
+  @include media (tablet-l) {
+    @include padding ($padding-t-b, 5rem);
+  }
+
+  @include media (mobile-s) {
+    @include padding ($padding-t-b, 2rem);
+  }
 
   body.ligth-mode & {
     background-color: $color-secundary-ligth;

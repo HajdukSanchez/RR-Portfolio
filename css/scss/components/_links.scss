@@ -3,10 +3,10 @@
 \*************************************************************/
 
 .link {
-  padding: 1rem;
   font-weight: 900;
   color: $color-aux;
   border-radius: .6rem;
+  @include padding(1rem, 1rem);
   @include font(1.6rem);
   @include transition(.3s);
 

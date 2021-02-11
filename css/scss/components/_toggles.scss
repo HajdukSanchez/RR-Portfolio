@@ -7,11 +7,19 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
   margin-left: 15rem;
+  padding-right: 0;
+  @include padding(1rem, 1rem);
+
+  @include media (desktop-m) {
+    margin: 0;
+  }
+
+  @include media (tablet-l) {
+    margin: 0;
+  }
 
   &__toggle {
-    margin-right: 2rem;
 
     .switch {
       display: flex;

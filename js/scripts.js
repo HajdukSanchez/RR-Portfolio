@@ -21,6 +21,16 @@ function viewInfo(id) {
   $company.classList.toggle('active');
 }
 
+// Function For fade effect
+/* window.addEventListener('scroll', () => {
+  const $fade_up = document.querySelectorAll(".fade__up")[0];
+  // 1/4 parts of the window heigth
+  let window_heigth = window.innerHeight / .4;
+  let distance = $fade_up.getBoundingClientRect().top;
+  console.log(window_heigth);
+  console.log(distance);
+}); */
+
 // Function to excecuted on load
 (function onLoad() {
   // Evaluate theme mode
