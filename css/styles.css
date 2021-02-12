@@ -21,26 +21,20 @@
   Animations
 \*************************************************************/
 .fade {
-  opacity: 0.2;
+  opacity: 0;
   transition: 0.5s ease all;
 }
 .fade--rigth {
-  transform: translateX(200%);
+  transform: translateX(20%);
 }
 .fade--left {
-  transform: translateX(-200%);
+  transform: translateX(-20%);
 }
 .fade--up {
-  transform: translateY(100%);
-}
-.fade--up-40 {
-  transform: translateY(40%);
+  transform: translateY(20%);
 }
 .fade--down {
-  transform: translateY(-100%);
-}
-.fade--down-200 {
-  transform: translateY(-200%);
+  transform: translateY(-20%);
 }
 
 .appear {
