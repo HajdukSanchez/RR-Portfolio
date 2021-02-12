@@ -21,14 +21,15 @@ function viewInfo(id) {
   $company.classList.toggle('active');
 }
 
-// Function For fade effect
+// TO-FIX: Enable animation only on Desktop media
+// Function for fade effect
 window.addEventListener('scroll', () => {
   function fadeIn(direction) {
     // Fade objects
     const $fade = document.querySelectorAll(`.fade--${direction}`);
     for (let i = 0; i < $fade.length; i++) {
         // 1/4 parts of the window heigth screen
-      let window_heigth = window.innerHeight / 1.4;
+      let window_heigth = window.innerHeight / 1.3;
       let distance = $fade[i].getBoundingClientRect().top;
       $fade[i].classList.add(`fade--${direction}`);
       if (distance <= window_heigth) {
